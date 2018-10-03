@@ -11,7 +11,8 @@ public class RobotMap {
     CLIMBER_TALON = 4,
     EXTENDER_TALON = 5,
     ELEVATOR_MOTOR = 6,
-    CLAMP_SOLENOID = 0;
+    CLAMP_SOLENOID = 0,
+    TIMEOUT_MS = 30;
 
     public static final double
     DISTANCE_PULSE = 0.00306640625;

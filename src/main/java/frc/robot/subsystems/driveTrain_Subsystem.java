@@ -3,6 +3,8 @@ package frc.robot.subsystems;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import frc.robot.RobotMap;
+
+import com.ctre.phoenix.motorcontrol.FeedbackDevice;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import com.kauailabs.navx.frc.AHRS;
 import edu.wpi.first.wpilibj.SPI;
@@ -37,11 +39,16 @@ public class driveTrain_Subsystem extends Subsystem {
         backLeft.follow(frontLeft);
         backRight.follow(frontRight);
         mainDrive.arcadeDrive(driver.getX(), driver.getY());
+
+        frontLeft.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute, 0, RobotMap.TIMEOUT_MS);
+        frontRight.configSelectedFeedbackSensor(FeedbackDevice.CTRE_MagEncoder_Absolute, 0, RobotMap.TIMEOUT_MS);
     }
 
-    public void AutonDrive(){
+    public void AutonDrive(double leftSetpoint, double rightSetpoint){
         backLeft.follow(frontLeft);
         backRight.follow(frontRight);
+
+        
 
     }
 
