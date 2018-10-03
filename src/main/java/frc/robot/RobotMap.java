@@ -13,5 +13,8 @@ public class RobotMap {
     ELEVATOR_MOTOR = 6,
     CLAMP_SOLENOID = 0;
 
+    public static final double
+    DISTANCE_PULSE = 0.00306640625;
+
 
 }
