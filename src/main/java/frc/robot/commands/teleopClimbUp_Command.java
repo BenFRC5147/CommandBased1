@@ -2,6 +2,7 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import frc.robot.Robot;
+import edu.wpi.first.wpilibj.DriverStation;
 
 
 
@@ -16,6 +17,7 @@ public class teleopClimbUp_Command extends Command {
 
   @Override
   protected void initialize() {
+    DriverStation.reportWarning("Climber initiating", false);
   }
 
 

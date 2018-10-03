@@ -20,6 +20,7 @@ public class arcadeDrive_Command extends Command {
 
   @Override
   protected void initialize() {
+    DriverStation.reportWarning("DriveTrain Initiating", false);
   }
 
 
